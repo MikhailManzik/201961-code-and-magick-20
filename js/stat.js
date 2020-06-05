@@ -49,7 +49,7 @@ window.renderStatistics = function (ctx, players, times) {
     if (players[i] === 'Вы') {
       ctx.fillStyle = COLOR_MY_PLAYER;
     } else {
-      ctx.fillStyle = 'blue';
+      ctx.fillStyle = 'hsl(240, ' + Math.floor(Math.random(0) * 100) + '%' + ', 50%)';
     }
     ctx.fillRect((CLOUD_POINT_X + COLUMN_WIDTH) + (COLUMN_WIDTH + COLUMN_GAP) * i, CLOUD_HEIGHT - (COLUMN_WIDTH - DISPLACE) - (COLUMN_MAX_HEIGHT * times[i]) / maxTime, COLUMN_WIDTH, (COLUMN_MAX_HEIGHT * times[i]) / maxTime);
     ctx.fillStyle = 'black';
